@@ -11,7 +11,7 @@ import java.util.Scanner;
  */
 public class MassUnit {
     private final double con = 0.45359237;
-    Scanner cin = new Scanner(System.in);
+    Scanner jin = new Scanner(System.in);
     private final int index;
     private double mass;
     private String unit;
@@ -84,7 +84,7 @@ public class MassUnit {
      */
     public void setMass(){
         System.out.print("Enter Mass: ");
-        this.mass = cin.nextDouble();
+        this.mass = jin.nextDouble();
     }
     
     /** 
@@ -105,7 +105,7 @@ public class MassUnit {
     }
     public void setUnit() throws Exception {
         System.out.print("Enter Unit with (kg as kilos or lb as pounds): ");
-        this.unit = cin.next();
+        this.unit = jin.next();
         if(!checkUnit(this.unit))
             throw new Exception("Invaild Unit Exception");
     }
@@ -139,7 +139,7 @@ public class MassUnit {
                     +"The was a ["+ e +"]\n"
                     + "Enter the values again\n"
                     + "=============================================");
-            cin.nextLine();
+            jin.nextLine();
             setMassAndUnit();
         }
     }
