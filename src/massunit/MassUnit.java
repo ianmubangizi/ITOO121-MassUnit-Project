@@ -20,7 +20,9 @@ public class MassUnit {
      * Default MassUnit Class Constructor
      */
     public MassUnit() {
-        this.index = 0;
+        this.unit = "kg";
+        this.mass = 0;
+        this.index = 1;
     }
 
     /** 
@@ -31,7 +33,9 @@ public class MassUnit {
      */
     public MassUnit(double mass) {
         this.mass = mass;
-        this.index = 1;
+        this.unit = "kg";
+        this.mass = 0;
+        this.index = 2;
     }
 
     /** 
@@ -42,6 +46,8 @@ public class MassUnit {
      */
     public MassUnit(String unit) {
         this.unit = unit;
+        this.unit = "kg";
+        this.mass = 0;
         this.index = 3;
     }
     
@@ -55,6 +61,8 @@ public class MassUnit {
     public MassUnit(double mass, String unit) {
         this.mass = mass;
         this.unit = unit;
+        this.unit = "kg";
+        this.mass = 0;
         this.index = 4;
     }
 
@@ -157,7 +165,8 @@ public class MassUnit {
     }
     
     public void displayKilosAndPounds(){
-        System.out.println("Your Mass is ["+ getMass() +""+ unit +"]\n"
+        System.out.println("=============================================\n"
+                + "Your Mass is ["+ getMass() +""+ unit +"]\n"
                 + "Which is equal to a Mass of "+ MassConvertion() +"");
     }
     
