@@ -111,13 +111,15 @@ public class MassUnit {
         else
             this.unit = unit;
     }
+    
     public void setUnit() throws Exception {
-        System.out.print("Enter Unit with (kg as kilos or lb as pounds): ");
+        System.out.print("Enter Unit as (kg - [Kilograms] or lb - [Pounds]): ");
         this.unit = jin.next();
+        
         if(!checkUnit(this.unit))
             throw new Exception("Invaild Unit Exception");
     }
-
+    
     public String MassConvertion(){
         if(unit.equalsIgnoreCase("kg"))
             return "["+ getMass() * con + "lb]";
@@ -169,7 +171,6 @@ public class MassUnit {
                 + "Your Mass is ["+ getMass() +""+ unit +"]\n"
                 + "Which is equal to a Mass of "+ MassConvertion() +"");
     }
-    
     
     /**
      * @param args the command line arguments
